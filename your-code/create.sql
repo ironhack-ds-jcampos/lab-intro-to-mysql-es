@@ -32,6 +32,7 @@ CREATE TABLE `customers` (
   `state` varchar(64) NOT NULL,
   `country` varchar(64) NOT NULL,
   `postal_code` varchar(5) NOT NULL,
+  `address` varchar(100) NOT NULL,
   PRIMARY KEY (`customer_id`),
   UNIQUE KEY `customers_unique` (`customer_id`)
 );
@@ -40,9 +41,9 @@ CREATE TABLE `customers` (
 -- cars.sellers definition
 
 CREATE TABLE `sellers` (
-  `personal_id` varchar(5) NOT NULL,
+  `seller_id` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `name` varchar(32) NOT NULL,
   `shop` varchar(100) NOT NULL,
-  PRIMARY KEY (`personal_id`),
-  UNIQUE KEY `sellers_unique` (`personal_id`)
+  PRIMARY KEY (`seller_id`),
+  UNIQUE KEY `sellers_unique` (`seller_id`)
 );
